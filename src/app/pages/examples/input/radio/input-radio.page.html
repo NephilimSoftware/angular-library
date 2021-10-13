@@ -1,0 +1,40 @@
+<h1>Radio buttons</h1>
+
+<p>Values can be simple types or user defined classes</p>
+
+<app-required-imports>
+  <app-import classes="FormControl" package="@nephilimsoftware/forms"></app-import>
+</app-required-imports>
+
+<app-control-ts-code>public readonly userDefinedValues: UserDefinedClass[] = [<br/>
+  new UserDefinedClass('A'),<br/>
+  new UserDefinedClass('B'),<br/>
+  new UserDefinedClass('C'),<br/>
+  new UserDefinedClass('D'),
+];<br/>
+public readonly firkrag: FormControl&lt;UserDefinedClass&gt; = new FormControl&lt;UserDefinedClass&gt;(this.userDefinedValues[1]);
+</app-control-ts-code>
+<p>Additional definitions used in example:</p>
+<pre><code>class UserDefinedClass &#123;
+  constructor(public readonly label: string) &#123;&#125;
+
+  public toString(): string &#123;
+    return `[UserDefinedClass label: $&#123;this.label&#125;]`;
+  &#125;
+&#125;
+</code></pre>
+
+<app-control-template-code>&lt;label *ngFor="let value of userDefinedValues"&gt;<br/>
+  &lt;input [formControl]="firkrag" [value]="value" name="test" type="radio" /&gt; {{ '{{' }} value.label &#125;&#125;
+&lt;/label&gt;
+</app-control-template-code>
+
+<app-control-example>
+  <label *ngFor="let value of userDefinedValues">
+    <input [formControl]="firkrag" [value]="value" name="test" type="radio" /> {{ value.label }}
+  </label>
+</app-control-example>
+
+<app-control-debug [control]="firkrag" [defaultValue]="userDefinedValues[1]"></app-control-debug>
+
+<app-control-events-log [control]="firkrag"></app-control-events-log>

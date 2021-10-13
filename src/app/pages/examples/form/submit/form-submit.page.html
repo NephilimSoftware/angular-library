@@ -1,0 +1,64 @@
+<h1>Single select</h1>
+
+<p>Values can be simple types or user defined classes</p>
+
+<app-required-imports>
+  <app-import classes="FormControl, Form, Validators" package="@nephilimsoftware/forms"></app-import>
+</app-required-imports>
+
+<app-control-ts-code>public readonly form: UserForm = new UserForm();</app-control-ts-code>
+<p>Additional definitions used in example:</p>
+<pre><code></code></pre>
+
+<app-control-template-code>
+</app-control-template-code>
+<app-control-example>
+  <form (submit)="onSubmitted($event)">
+    <label>login:</label>
+    <input [formControl]="form.login" type="text" /><br/>
+    <label>first name:</label>
+    <input [formControl]="form.firstName" type="text" /><br/>
+    <label>last name:</label>
+    <input [formControl]="form.lastName" type="text" /><br/>
+    <label>age:</label>
+    <input [formControl]="form.age" type="number" /><br/>
+    <label>is adddress required:</label>
+    <input [formControl]="form.isAddressRequired" type="checkbox" /><br/>
+
+    <fieldset>
+      <label>street:</label>
+      <input [formControl]="form.address.street" type="text" /><br/>
+      <label>postal code:</label>
+      <input [formControl]="form.address.postalCode" type="text" /><br/>
+      <label>city:</label>
+      <input [formControl]="form.address.city" type="text" /><br/>
+    </fieldset>
+    <fieldset *ngFor="let address of form.additionalAddresses.items | async">
+      <label>street:</label>
+      <input [formControl]="address.street" type="text" /><br/>
+      <label>postal code:</label>
+      <input [formControl]="address.postalCode" type="text" /><br/>
+      <label>city:</label>
+      <input [formControl]="address.city" type="text" /><br/>
+      <button type="button" (click)="onRemoveAddressClicked(address)">Remove Address</button>
+    </fieldset>
+    <button type="button" (click)="onAddAddressClicked()">Add Address</button>
+
+    <fieldset>
+      <p>friend names:</p>
+      <input *ngFor="let friendName of form.friendNames.items | async" [formControl]="friendName" type="text" /><br/>
+      <button type="button" (click)="onAddFriendNameClicked()">Add</button>
+    </fieldset>
+    <button type="submit" [disabledWhenFormIsInvalid]="form">Submit</button>
+  </form>
+</app-control-example>
+
+<ng-container *ngIf="result | async as result">
+  <h2>Submitted result:</h2>
+  <pre><samp>{{ result | json }}</samp></pre>
+</ng-container>
+
+<ng-container *ngIf="form.validationErrors | async as validationErrors">
+  <h2>Validation Errors:</h2>
+  <pre><samp>{{ validationErrors.join('\n') }}</samp></pre>
+</ng-container>

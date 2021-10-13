@@ -1,0 +1,19 @@
+<h1>Textarea</h1>
+
+<app-required-imports>
+  <app-import classes="FormControl" package="@nephilimsoftware/forms"></app-import>
+</app-required-imports>
+
+<app-control-ts-code>public readonly firkrag: FormControl&lt;string&gt; = new FormControl&lt;string&gt;({{this.wololo}});
+</app-control-ts-code>
+
+<app-control-template-code>&lt;textarea [formControl]="firkrag" /&gt;&lt;/textarea&gt;
+</app-control-template-code>
+
+<app-control-example>
+  <textarea [formControl]="firkrag" ></textarea>
+</app-control-example>
+
+<app-control-debug [control]="firkrag" [defaultValue]="wololo"></app-control-debug>
+
+<app-control-events-log [control]="firkrag"></app-control-events-log>

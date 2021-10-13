@@ -1,0 +1,19 @@
+<h1>Text input</h1>
+
+<app-required-imports>
+  <app-import classes="FormControl" package="@nephilimsoftware/forms"></app-import>
+</app-required-imports>
+
+<app-control-ts-code>public readonly firkrag: FormControl&lt;string&gt; = new FormControl&lt;string&gt;('{{wololo}}');
+</app-control-ts-code>
+
+<app-control-template-code>&lt;input [formControl]="firkrag" type="text" /&gt;
+</app-control-template-code>
+
+<app-control-example>
+  <input [formControl]="firkrag" type="text" />
+</app-control-example>
+
+<app-control-debug [control]="firkrag" [defaultValue]="wololo"></app-control-debug>
+
+<app-control-events-log [control]="firkrag"></app-control-events-log>

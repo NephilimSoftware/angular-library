@@ -1,0 +1,47 @@
+<h1>Single select</h1>
+
+<p>Values can be simple types or user defined classes</p>
+
+<app-required-imports>
+  <app-import classes="FormControl" package="@nephilimsoftware/forms"></app-import>
+</app-required-imports>
+
+<app-control-ts-code>public readonly userDefinedValues: UserDefinedClass[] = [<br/>
+  new UserDefinedClass('A'),<br/>
+  new UserDefinedClass('B'),<br/>
+  new UserDefinedClass('C'),<br/>
+  new UserDefinedClass('D'),
+];
+public readonly singleValue: UserDefinedClass = new UserDefinedClass('Fura');
+public readonly firkrag: FormControl&lt;UserDefinedClass&gt; = new FormControl&lt;UserDefinedClass&gt;(this.userDefinedValues[1]);
+</app-control-ts-code>
+<p>Additional definitions used in example:</p>
+<pre><code>class UserDefinedClass &#123;
+  constructor(public readonly label: string) &#123;&#125;
+
+  public toString(): string &#123;
+    return `[UserDefinedClass label: $&#123;this.label&#125;]`;
+  &#125;
+&#125;
+</code></pre>
+
+<app-control-template-code>&lt;select [formControl]="firkrag" multiple&gt;
+&nbsp;&nbsp;&lt;optgroup label="Letters"&gt;
+&nbsp;&nbsp;&nbsp;&nbsp;&lt;option *ngFor="let value of userDefinedValues" [value]="value"&gt;{{ '{{' }} value &#125;&#125;&lt;/option&gt;
+&nbsp;&nbsp;&lt;/optgroup&gt;
+&nbsp;&nbsp;&lt;option [value]="singleValue"&gt;{{ singleOption.label }}&lt;/option&gt;
+&lt;/select&gt;
+</app-control-template-code>
+
+<app-control-example>
+  <select [formControl]="formControl" multiple>
+    <optgroup label="Letters">
+      <option *ngFor="let value of options" [value]="value">{{ value.label }}</option>
+    </optgroup>
+    <option [value]="singleOption">{{ singleOption.label }}</option>
+  </select>
+</app-control-example>
+
+<app-control-debug [control]="formControl" [defaultValue]="[options[1], singleOption]"></app-control-debug>
+
+<app-control-events-log [control]="formControl"></app-control-events-log>

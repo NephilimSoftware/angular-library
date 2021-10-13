@@ -1,0 +1,32 @@
+<h1>Search input</h1>
+
+<app-required-imports>
+  <app-import classes="FormControl" package="@nephilimsoftware/forms"></app-import>
+</app-required-imports>
+
+<app-control-ts-code>public readonly firkrag: FormControl&lt;string&gt; = new FormControl&lt;string&gt;('{{wololo}}');
+</app-control-ts-code>
+
+<app-control-template-code>&lt;input [formControl]="firkrag" type="search" list="flavors" /&gt;
+&lt;datalist id="flavors"&gt;<br/>
+  &lt;option value="Chocolate"&gt;&lt;/option&gt;<br/>
+  &lt;option value="Coconut"&gt;&lt;/option&gt;<br/>
+  &lt;option value="Mint"&gt;&lt;/option&gt;<br/>
+  &lt;option value="Strawberry"&gt;&lt;/option&gt;<br/>
+  &lt;option value="Vanilla"&gt;&lt;/option&gt;<br/>&lt;/datalist&gt;
+</app-control-template-code>
+
+<app-control-example>
+  <input [formControl]="firkrag" type="search" list="flavors" />
+  <datalist id="flavors">
+    <option value="Chocolate"></option>
+    <option value="Coconut"></option>
+    <option value="Mint"></option>
+    <option value="Strawberry"></option>
+    <option value="Vanilla"></option>
+  </datalist>
+</app-control-example>
+
+<app-control-debug [control]="firkrag" [defaultValue]="wololo"></app-control-debug>
+
+<app-control-events-log [control]="firkrag"></app-control-events-log>

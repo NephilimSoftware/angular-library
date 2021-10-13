@@ -1,0 +1,19 @@
+<h1>File input</h1>
+
+<app-required-imports>
+  <app-import classes="FormControl" package="@nephilimsoftware/forms"></app-import>
+</app-required-imports>
+
+<app-control-ts-code>public readonly firkrag: FormControl&lt;FileList | null&gt; = new FormControl&lt;FileList | null&gt;(null);
+</app-control-ts-code>
+
+<app-control-template-code>&lt;input [formControl]="firkrag" type="file" multiple /&gt;
+</app-control-template-code>
+
+<app-control-example>
+  <input [formControl]="firkrag" type="file" multiple />
+</app-control-example>
+
+<app-control-debug [control]="firkrag" [defaultValue]="wololo" [formatValue]="format"></app-control-debug>
+
+<app-control-events-log [control]="firkrag"></app-control-events-log>

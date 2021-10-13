@@ -1,0 +1,37 @@
+<h2>Debug:</h2>
+<p>
+  <code>control.value | async</code>&nbsp;<button (click)="control.value.set(defaultValue)">
+    control.value.set({{ formatValue(defaultValue) }})
+  </button>
+  : <ng-container *ngIf="control.value | async as value">{{ formatValue(value) }}</ng-container>
+</p>
+<p>
+  <code>control.isEnabled | async</code>&nbsp;<button (click)="control.enable()">control.enable()</button> :
+  {{ control.isEnabled | async | check }}
+</p>
+<p>
+  <code>control.isDisabled | async</code>&nbsp;<button (click)="control.disable()">control.disable()</button> :
+  {{ control.isDisabled | async | check }}
+</p>
+<p>
+  <code>control.isPristine | async</code>&nbsp;<button (click)="control.markAsPristine()">
+    control.markAsPristine()
+  </button>
+  : {{ control.isPristine | async | check }}
+</p>
+<p>
+  <code>control.isDirty | async</code>&nbsp;<button (click)="control.markAsDirty()">control.markAsDirty()</button> :
+  {{ control.isDirty | async | check }}
+</p>
+<p>
+  <code>control.isUntouched | async</code>&nbsp;<button (click)="control.markAsUntouched()">
+    control.markAsUntouched()
+  </button>
+  : {{ control.isUntouched | async | check }}
+</p>
+<p>
+  <code>control.wasTouched | async</code>&nbsp;<button (click)="control.markAsTouched()">
+    control.markAsTouched()
+  </button>
+  : {{ control.wasTouched | async | check }}
+</p>

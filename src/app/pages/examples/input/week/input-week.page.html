@@ -1,0 +1,19 @@
+<h1>Week input</h1>
+
+<app-required-imports>
+  <app-import classes="FormControl" package="@nephilimsoftware/forms"></app-import>
+</app-required-imports>
+
+<app-control-ts-code>public readonly firkrag: FormControl&lt;Date | null&gt; = new FormControl&lt;Date | null&gt;(null);
+</app-control-ts-code>
+
+<app-control-template-code>&lt;input [formControl]="firkrag" type="week" /&gt;
+</app-control-template-code>
+
+<app-control-example>
+  <input [formControl]="firkrag" type="week" />
+</app-control-example>
+
+<app-control-debug [control]="firkrag" [defaultValue]="wololo"></app-control-debug>
+
+<app-control-events-log [control]="firkrag"></app-control-events-log>
