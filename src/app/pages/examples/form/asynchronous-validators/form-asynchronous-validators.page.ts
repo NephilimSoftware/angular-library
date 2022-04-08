@@ -1,7 +1,7 @@
 import {Component, OnDestroy} from '@angular/core';
 import {FormControl, SubmittableForm, ValidationError} from '@nephilimsoftware/forms';
 import {BehaviorSubject, Observable} from 'rxjs';
-import {delay, take, tap} from 'rxjs/operators';
+import {delay, tap} from 'rxjs/operators';
 
 interface FormDto {
   title: string;
