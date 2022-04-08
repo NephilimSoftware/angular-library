@@ -1,4 +1,4 @@
-@use '~@angular/material/index' as mat;
+@use '@angular/material' as mat;
 
 $clearsound-typography: mat.define-typography-config(
   $font-family: var(--font-family--paragraph),

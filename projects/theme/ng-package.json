@@ -3,5 +3,6 @@
   "dest": "../../dist/theme",
   "lib": {
     "entryFile": "src/public-api.ts"
-  }
+  },
+  "assets": ["src/lib/styles/_index.scss", "src/lib/styles/**/*.scss"]
 }
