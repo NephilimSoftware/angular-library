@@ -10,6 +10,7 @@
     "paths": {
       "@app/*": ["src/app/*"],
       "@angular/*": ["./node_modules/@angular/*"],
+      "@nephilimSoftwarePackages/*": ["./node_modules/@nephilimsoftware/*"],
       "@nephilimsoftware/forms": ["./dist/forms"],
       "@nephilimsoftware/forms/*": ["./dist/forms/*"],
       "@nephilimsoftware/reactive-forms": ["./dist/reactive-forms"],

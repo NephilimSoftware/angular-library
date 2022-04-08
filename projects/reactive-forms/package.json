@@ -3,7 +3,8 @@
   "version": "0.0.1",
   "peerDependencies": {
     "@angular/common": "^13.3.0",
-    "@angular/core": "^13.3.0"
+    "@angular/core": "^13.3.0",
+    "@nephilimsoftware/observables": "0.0.1"
   },
   "scripts": {
     "build": "ng build reactive-forms --prod",

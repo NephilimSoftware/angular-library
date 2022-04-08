@@ -1,6 +1,5 @@
 import {AbstractControl, AbstractControlOptions, AsyncValidatorFn, FormArray, ValidatorFn} from '@angular/forms';
-// import {combineLatestIncludingEmpty} from './operators/combine-latest-including-empty';
-import {read} from './observable/read';
+import {combineLatestIncludingEmpty, read} from '@nephilimSoftwarePackages/observables/nephilimsoftware-observables';
 import {BehaviorSubject, merge, Observable} from 'rxjs';
 import {switchMap} from 'rxjs/operators';
 
@@ -54,9 +53,9 @@ export class ArrayFormGroup<TItemFormGroup extends AbstractControl> extends Form
     return this.items.pipe(switchMap((items) => merge(...items.map(selectValue))));
   }
 
-  // public combine<TValue>(project: (item: TItemFormGroup) => Observable<TValue>): Observable<TValue[]> {
-  //   return this.items.pipe(switchMap((item) => combineLatestIncludingEmpty(item.map(project))));
-  // }
+  public combine<TValue>(project: (item: TItemFormGroup) => Observable<TValue>): Observable<TValue[]> {
+    return this.items.pipe(switchMap((item) => combineLatestIncludingEmpty(item.map(project))));
+  }
 
   public async fetch<TResult>(
     getResult: (item: TItemFormGroup) => Promise<TResult | undefined>

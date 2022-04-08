@@ -1,6 +1,6 @@
 import {FormControl} from '@angular/forms';
 import {currentValue} from './abstract-control';
-import {read} from '../observable/read';
+import {read} from '@nephilimSoftwarePackages/observables/nephilimsoftware-observables';
 
 describe('AbstractControl', () => {
   let abstractControl: FormControl;
