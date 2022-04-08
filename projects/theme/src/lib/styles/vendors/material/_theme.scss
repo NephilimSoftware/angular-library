@@ -1,0 +1,54 @@
+@use '~@angular/material/index' as mat;
+
+$clearsound-typography: mat.define-typography-config(
+  $font-family: var(--font-family--paragraph),
+  $button: mat.define-typography-level(var(--font-size--m), 1em),
+  $input: mat.define-typography-level(var(--font-size--m), 1em),
+);
+
+$clearsound-palette: (
+  100: var(--color--brand-02),
+  500: var(--color--brand-01),
+  700: var(--color--brand-03),
+  A100: var(--color--brand-05),
+  A500: var(--color--brand-04),
+  A700: var(--color--brand-06),
+  W100: var(--color--brand-08),
+  W500: var(--color--brand-07),
+  W700: var(--color--brand-09),
+  contrast: (
+    100: var(--color--ui-01),
+    500: var(--color--ui-01),
+    700: var(--color--ui-01),
+    A100: var(--color--ui-01),
+    A500: var(--color--ui-01),
+    A700: var(--color--ui-01),
+    W100: var(--color--ui-01),
+    W500: var(--color--ui-01),
+    W700: var(--color--ui-01),
+  ),
+);
+
+@include mat.core($clearsound-typography);
+
+$clearsound-primary: mat.define-palette($clearsound-palette, 500, 100, 700);
+$clearsound-accent: mat.define-palette($clearsound-palette, A500, A100, A700);
+$clearsound-warn: mat.define-palette($clearsound-palette, W500, W100, W700);
+
+$clearsound-theme: mat.define-light-theme(
+  (
+    color: (
+      primary: $clearsound-primary,
+      accent: $clearsound-accent,
+      warn: $clearsound-warn,
+    ),
+  )
+);
+
+@include mat.core-theme($clearsound-theme);
+
+@include mat.form-field-theme($clearsound-theme);
+@include mat.button-theme($clearsound-theme);
+@include mat.snack-bar-theme($clearsound-theme);
+@include mat.select-theme($clearsound-theme);
+@include mat.autocomplete-theme($clearsound-theme);

@@ -1,0 +1,35 @@
+:host {
+  &.o-layout {
+    --layout-item_spacing: 0;
+
+    display: flex;
+    flex-wrap: wrap;
+    width: 100%;
+    max-width: 100%;
+    box-sizing: border-box;
+
+    &--spaced {
+      --layout-item_spacing: var(--layout_spacing);
+      margin: var(--layout_negative-spacing);
+      width: auto;
+      max-width: none;
+    }
+
+    &--single-row {
+      flex-wrap: nowrap;
+    }
+
+    &--centered {
+      justify-content: center;
+      text-align: center;
+    }
+
+    &--vertically-centered {
+      align-items: center;
+    }
+
+    &--list {
+      flex-direction: column;
+    }
+  }
+}

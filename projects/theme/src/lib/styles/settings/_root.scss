@@ -1,0 +1,82 @@
+:root {
+  --transition_time: 0.3s;
+  --transition_ease: ease;
+
+  --font-size--body: 20px;
+  --font-size--xl: 20px;
+  --font-size--l: 16px;
+  --font-size--m: 13px;
+  --font-size--xs: 8px;
+
+  --line-height--xl: 22px;
+  --line-height--l: 18px;
+  --line-height--m: 17px;
+  --line-height--xs: 9px;
+
+  --form-field_height: var(--size--xl);
+  --form-field_radius: var(--size--xxs);
+  --form-field--disabled_background: #fafafa;
+  --form-field--disabled_color: var(--color--ui-05);
+
+  --button_height: var(--form-field_height);
+  --button_radius: var(--form-field_radius);
+  --button--neutral_background: var(--color--ui-02);
+
+  --font-family--paragraph: Comfortaa, sans-serif;
+  --font-weight--normal: 400;
+  --font-weight--bold: 700;
+
+  --size--xxl: 4rem;
+  --size--xl: 2rem;
+  --size--l: 1.33333333333rem;
+  --size--m: 1rem;
+  --size--s: 0.75rem;
+  --size--xs: 0.5rem;
+  --size--xxs: 0.25rem;
+  --size--xxxs: 0.125rem;
+  --size--hairline: 1px;
+
+  --color--ui-01: #ffffff;
+  --color--ui-02: #e1e7ef;
+  --color--ui-03: #d6dde6;
+  --color--ui-04: #b0bbc8;
+  --color--ui-05: #969696;
+  --color--ui-06: #5f6770;
+  --color--ui-07: #2c2c2c;
+  --color--ui-08: #000000;
+
+  --color--success: #28a745;
+  --color--success-contrast: var(--color--ui-01);
+  --color--warning: #ffc107;
+  --color--warning-contrast: var(--color--ui-07);
+  --color--error: #dc3545;
+  --color--error-contrast: var(--color--ui-01);
+
+  --elevation--01: 0 var(--size--xxs) var(--size--s) rgba(0, 0, 0, 0.1);
+
+  --layout_spacing: 0.5rem;
+  --layout_negative-spacing: -0.5rem;
+
+  --caption_font-size: var(--font-size--xs);
+  --caption_line-height: var(--line-height--xs);
+
+  --paragraph_font-size: var(--font-size--m);
+  --paragraph_line-height: var(--line-height--m);
+
+  --label_font-size: var(--font-size--l);
+  --label_line-height: var(--line-height--l);
+
+  --heading_font-size: var(--font-size--xl);
+  --heading_line-height: var(--line-height--xl);
+
+  // Because of material design those value must have those weird values
+  --layer--blocker: 800;
+  --layer--notification: 700;
+  --layer--dialog: 600;
+  --layer--fab: 500;
+  --layer--popup: 400;
+  --layer--hint: 300;
+  --layer--screen-attached: 200;
+  --layer--content-attached: 100;
+  --layer--content: 0;
+}

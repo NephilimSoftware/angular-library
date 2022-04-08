@@ -1,0 +1,18 @@
+.u-color {
+  &--success {
+    color: var(--color--success);
+  }
+  &--error {
+    color: var(--color--error);
+  }
+
+  &--ui-01 {
+    color: var(--color--ui-01);
+  }
+  &--ui-04 {
+    color: var(--color--ui-04);
+  }
+  &--ui-06 {
+    color: var(--color--ui-06);
+  }
+}

@@ -1,0 +1,222 @@
+@import '../settings/variables';
+
+.u-width {
+  &--match-parent {
+    width: 100%;
+  }
+
+  // ColumnDirective classes
+  &--col {
+    &-grow {
+      flex-grow: 1;
+    }
+    &-1 {
+      width: 8.333%;
+    }
+    &-2 {
+      width: 16.666%;
+    }
+    &-3 {
+      width: 25%;
+    }
+    &-4 {
+      width: 33.333%;
+    }
+    &-5 {
+      width: 41.666%;
+    }
+    &-6 {
+      width: 50%;
+    }
+    &-7 {
+      width: 58.333%;
+    }
+    &-8 {
+      width: 66.666%;
+    }
+    &-9 {
+      width: 75%;
+    }
+    &-10 {
+      width: 83.33%;
+    }
+    &-11 {
+      width: 91.666%;
+    }
+    &-12 {
+      width: 100%;
+    }
+  }
+  @media screen and (min-width: $screen--s) {
+    &--col {
+      &-grow---s {
+        flex-grow: 1;
+      }
+      &-1---s {
+        width: 8.333%;
+      }
+      &-2---s {
+        width: 16.666%;
+      }
+      &-3---s {
+        width: 25%;
+      }
+      &-4---s {
+        width: 33.333%;
+      }
+      &-5---s {
+        width: 41.666%;
+      }
+      &-6---s {
+        width: 50%;
+      }
+      &-7---s {
+        width: 58.333%;
+      }
+      &-8---s {
+        width: 66.666%;
+      }
+      &-9---s {
+        width: 75%;
+      }
+      &-10---s {
+        width: 83.33%;
+      }
+      &-11---s {
+        width: 91.666%;
+      }
+      &-12---s {
+        width: 100%;
+      }
+    }
+  }
+  @media screen and (min-width: $screen--m) {
+    &--col {
+      &-grow---m {
+        flex-grow: 1;
+      }
+      &-1---m {
+        width: 8.333%;
+      }
+      &-2---m {
+        width: 16.666%;
+      }
+      &-3---m {
+        width: 25%;
+      }
+      &-4---m {
+        width: 33.333%;
+      }
+      &-5---m {
+        width: 41.666%;
+      }
+      &-6---m {
+        width: 50%;
+      }
+      &-7---m {
+        width: 58.333%;
+      }
+      &-8---m {
+        width: 66.666%;
+      }
+      &-9---m {
+        width: 75%;
+      }
+      &-10---m {
+        width: 83.33%;
+      }
+      &-11---m {
+        width: 91.666%;
+      }
+      &-12---m {
+        width: 100%;
+      }
+    }
+  }
+  @media screen and (min-width: $screen--l) {
+    &--col {
+      &-grow---l {
+        flex-grow: 1;
+      }
+      &-1---l {
+        width: 8.333%;
+      }
+      &-2---l {
+        width: 16.666%;
+      }
+      &-3---l {
+        width: 25%;
+      }
+      &-4---l {
+        width: 33.333%;
+      }
+      &-5---l {
+        width: 41.666%;
+      }
+      &-6---l {
+        width: 50%;
+      }
+      &-7---l {
+        width: 58.333%;
+      }
+      &-8---l {
+        width: 66.666%;
+      }
+      &-9---l {
+        width: 75%;
+      }
+      &-10---l {
+        width: 83.33%;
+      }
+      &-11---l {
+        width: 91.666%;
+      }
+      &-12---l {
+        width: 100%;
+      }
+    }
+  }
+  @media screen and (min-width: $screen--xl) {
+    &--col {
+      &-grow---xl {
+        flex-grow: 1;
+      }
+      &-1---xl {
+        width: 8.333%;
+      }
+      &-2---xl {
+        width: 16.666%;
+      }
+      &-3---xl {
+        width: 25%;
+      }
+      &-4---xl {
+        width: 33.333%;
+      }
+      &-5---xl {
+        width: 41.666%;
+      }
+      &-6---xl {
+        width: 50%;
+      }
+      &-7---xl {
+        width: 58.333%;
+      }
+      &-8---xl {
+        width: 66.666%;
+      }
+      &-9---xl {
+        width: 75%;
+      }
+      &-10---xl {
+        width: 83.33%;
+      }
+      &-11---xl {
+        width: 91.666%;
+      }
+      &-12---xl {
+        width: 100%;
+      }
+    }
+  }
+}

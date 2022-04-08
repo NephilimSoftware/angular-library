@@ -1,0 +1,15 @@
+@import '../tools/sizing';
+
+@mixin padding($suffix: '') {
+  @include sizing((padding), '', $suffix);
+  @include sizing((padding-top, padding-bottom), '-vertical', $suffix);
+  @include sizing((padding-left, padding-right), '-horizontal', $suffix);
+  @include sizing((padding-top), '-top', $suffix);
+  @include sizing((padding-right), '-right', $suffix);
+  @include sizing((padding-bottom), '-bottom', $suffix);
+  @include sizing((padding-left), '-left', $suffix);
+}
+
+.u-padding {
+  @include padding();
+}

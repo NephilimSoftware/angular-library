@@ -1,0 +1,8 @@
+.u-layer {
+  &--content {
+    z-index: var(--layer--content-attached);
+  }
+  &--screen {
+    z-index: var(--layer--screen-attached);
+  }
+}

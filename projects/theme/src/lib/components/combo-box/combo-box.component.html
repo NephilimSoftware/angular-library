@@ -1,0 +1,41 @@
+<div class="app-combo-box__query">
+  <input
+    #queryInput
+    matInput
+    [attr.aria-describedby]="userAriaDescribedBy"
+    [attr.aria-labelledby]="parentFormField?.getLabelId()"
+    [placeholder]="placeholder"
+    [required]="required"
+    [formControl]="queryControl"
+    [matAutocomplete]="optionsList"
+    (focusin)="onFocusIn($event)"
+    (focusout)="onFocusOut($event)"
+    (click)="onClicked()"
+  />
+  <button
+    *ngIf="value"
+    mat-icon-button
+    class="mat-icon-button--small"
+    (click)="onClearClicked()"
+  >
+    <mat-icon>close</mat-icon>
+  </button>
+</div>
+<mat-autocomplete
+  #optionsList
+  [autoActiveFirstOption]="true"
+  [displayWith]="formatOption"
+  (optionSelected)="onOptionSelected($event)"
+>
+  <mat-option *ngIf="isLoading; else result" disabled>
+    <app-layout [isCentered]="true"><mat-spinner></mat-spinner></app-layout>
+  </mat-option>
+  <ng-template #result>
+    <mat-option *ngFor="let option of options" [value]="option">
+      {{ formatOption(option) }}
+    </mat-option>
+    <mat-option *ngIf="options.length === 0 && noResultsMessage" disabled>
+      <app-paragraph class="u-align--center">{{ noResultsMessage }}</app-paragraph>
+    </mat-option>
+  </ng-template>
+</mat-autocomplete>

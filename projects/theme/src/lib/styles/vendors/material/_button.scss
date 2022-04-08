@@ -1,0 +1,30 @@
+.mat-flat-button.mat-button-base {
+  min-height: var(--button_height);
+  border-radius: var(--button_radius);
+  line-height: var(--button_height);
+  &.mat-neutral {
+    background-color: var(--button--neutral_background);
+  }
+}
+
+.mat-icon-button.mat-icon-button--small {
+  width: var(--size--m);
+  height: var(--size--m);
+  line-height: 1;
+  display: inline-flex;
+  justify-content: center;
+  align-items: center;
+
+  .mat-button-wrapper {
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .mat-icon {
+    width: var(--size--m);
+    height: var(--size--m);
+    font-size: var(--size--m);
+    line-height: 1;
+  }
+}

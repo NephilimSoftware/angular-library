@@ -1,0 +1,21 @@
+@mixin values($suffix, $properties, $value) {
+  &#{$suffix} {
+    @each $property in $properties {
+      #{$property}: $value;
+    }
+  }
+}
+
+@mixin sizing($properties, $name, $suffix) {
+  &#{$name} {
+    @include values(--none#{$suffix}, $properties, 0);
+    @include values(--xxxs#{$suffix}, $properties, var(--size--xxxs));
+    @include values(--xxs#{$suffix}, $properties, var(--size--xxs));
+    @include values(--xs#{$suffix}, $properties, var(--size--xs));
+    @include values(--s#{$suffix}, $properties, var(--size--s));
+    @include values(--m#{$suffix}, $properties, var(--size--m));
+    @include values(--l#{$suffix}, $properties, var(--size--l));
+    @include values(--xl#{$suffix}, $properties, var(--size--xl));
+    @include values(--xxl#{$suffix}, $properties, var(--size--xxl));
+  }
+}

@@ -1,0 +1,10 @@
+:host {
+  &.o-layout {
+    &__item {
+      border: var(--layout-item_spacing) solid transparent;
+      display: block;
+      box-sizing: border-box;
+      position: relative;
+    }
+  }
+}

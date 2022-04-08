@@ -1,0 +1,31 @@
+.mat-icon {
+  &--size-em.material-icons {
+    width: 1em;
+    height: 1em;
+    font-size: 1em;
+  }
+
+  &--size-xs.material-icons {
+    width: var(--size--xs);
+    height: var(--size--xs);
+    font-size: var(--size--xs);
+  }
+
+  &--size-s.material-icons {
+    width: var(--size--s);
+    height: var(--size--s);
+    font-size: var(--size--s);
+  }
+
+  &--size-m.material-icons {
+    width: var(--size--m);
+    height: var(--size--m);
+    font-size: var(--size--m);
+  }
+
+  &--size-xl.material-icons {
+    width: var(--size--xl);
+    height: var(--size--xl);
+    font-size: var(--size--xl);
+  }
+}
