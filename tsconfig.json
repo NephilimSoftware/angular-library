@@ -11,7 +11,9 @@
       "@app/*": ["src/app/*"],
       "@angular/*": ["./node_modules/@angular/*"],
       "@nephilimsoftware/forms": ["./dist/forms"],
-      "@nephilimsoftware/forms/*": ["./dist/forms/*"]
+      "@nephilimsoftware/forms/*": ["./dist/forms/*"],
+      "@nephilimsoftware/observables": ["./dist/observables"],
+      "@nephilimsoftware/observables/*": ["./dist/observables/*"],
     },
     "noFallthroughCasesInSwitch": true,
     "sourceMap": true,
