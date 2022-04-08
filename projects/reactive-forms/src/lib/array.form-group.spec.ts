@@ -1,6 +1,6 @@
 import {FormControl} from '@angular/forms';
 import {ArrayFormGroup} from './array.form-group';
-import {read} from '@nephilimSoftwarePackages/observables/nephilimsoftware-observables';
+import {read} from '@nephilimSoftwarePackages/observables';
 
 describe('ArrayFormGroup', () => {
   let arrayFormGroup: ArrayFormGroup<FormControl>;

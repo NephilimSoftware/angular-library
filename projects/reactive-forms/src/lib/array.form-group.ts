@@ -1,5 +1,5 @@
 import {AbstractControl, AbstractControlOptions, AsyncValidatorFn, FormArray, ValidatorFn} from '@angular/forms';
-import {combineLatestIncludingEmpty, read} from '@nephilimSoftwarePackages/observables/nephilimsoftware-observables';
+import {combineLatestIncludingEmpty, read} from '@nephilimSoftwarePackages/observables';
 import {BehaviorSubject, merge, Observable} from 'rxjs';
 import {switchMap} from 'rxjs/operators';
 

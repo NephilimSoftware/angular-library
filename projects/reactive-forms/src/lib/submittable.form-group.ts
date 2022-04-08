@@ -1,7 +1,7 @@
 import {HttpErrorResponse} from '@angular/common/http';
 import {AbstractControl, FormGroup, ValidationErrors, ValidatorFn} from '@angular/forms';
 import {ValidationError} from './validation.error';
-import {read} from '@nephilimSoftwarePackages/observables/nephilimsoftware-observables';
+import {read} from '@nephilimSoftwarePackages/observables';
 import {Observable} from 'rxjs';
 
 export function RemoteField<TTarget extends SubmittableFormGroup>(

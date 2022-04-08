@@ -1,6 +1,6 @@
 import {FormControl} from '@angular/forms';
 import {currentValue} from './abstract-control';
-import {read} from '@nephilimSoftwarePackages/observables/nephilimsoftware-observables';
+import {read} from '@nephilimSoftwarePackages/observables';
 
 describe('AbstractControl', () => {
   let abstractControl: FormControl;
@@ -18,6 +18,6 @@ describe('AbstractControl', () => {
       abstractControl.setValue('first');
       abstractControl.setValue('second');
       expect(await read(currentValue(abstractControl))).toBe('second');
-    })
+    });
   });
 });
