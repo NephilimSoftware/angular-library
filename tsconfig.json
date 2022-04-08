@@ -11,7 +11,9 @@
       "@app/*": ["src/app/*"],
       "@angular/*": ["./node_modules/@angular/*"],
       "@nephilimsoftware/forms": ["./dist/forms"],
-      "@nephilimsoftware/forms/*": ["./dist/forms/*"]
+      "@nephilimsoftware/forms/*": ["./dist/forms/*"],
+      "@nephilimsoftware/reactive-forms": ["./dist/reactive-forms"],
+      "@nephilimsoftware/reactive-forms/*": ["./dist/reactive-forms/*"]
     },
     "noFallthroughCasesInSwitch": true,
     "sourceMap": true,
@@ -22,10 +24,7 @@
     "importHelpers": true,
     "target": "es2015",
     "module": "es2020",
-    "lib": [
-      "es2018",
-      "dom"
-    ]
+    "lib": ["es2018", "dom"]
   },
   "angularCompilerOptions": {
     "enableI18nLegacyMessageIdFormat": false,
