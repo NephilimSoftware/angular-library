@@ -45,10 +45,21 @@ $clearsound-theme: mat.define-light-theme(
   )
 );
 
-@include mat.core-theme($clearsound-theme);
-
-@include mat.form-field-theme($clearsound-theme);
-@include mat.button-theme($clearsound-theme);
-@include mat.snack-bar-theme($clearsound-theme);
-@include mat.select-theme($clearsound-theme);
 @include mat.autocomplete-theme($clearsound-theme);
+@include mat.button-theme($clearsound-theme);
+@include mat.button-toggle-theme($clearsound-theme);
+@include mat.checkbox-theme($clearsound-theme);
+@include mat.core-theme($clearsound-theme);
+@include mat.datepicker-theme($clearsound-theme);
+@include mat.form-field-theme($clearsound-theme);
+@include mat.menu-theme($clearsound-theme);
+@include mat.paginator-theme($clearsound-theme);
+@include mat.progress-bar-theme($clearsound-theme);
+@include mat.progress-spinner-theme($clearsound-theme);
+@include mat.radio-theme($clearsound-theme);
+@include mat.select-theme($clearsound-theme);
+@include mat.slide-toggle-theme($clearsound-theme);
+@include mat.slider-theme($clearsound-theme);
+@include mat.snack-bar-theme($clearsound-theme);
+@include mat.table-theme($clearsound-theme);
+@include mat.tooltip-theme($clearsound-theme);
