@@ -8,7 +8,8 @@
   "scripts": {
     "build": "ng build observables --prod",
     "start": "ng build observables --watch",
-    "test": "ng test observables"
+    "test": "ng test observables",
+    "test:ci": "ng test observables --watch=false --source-map=false --progress=false"
   },
   "dependencies": {
     "tslib": "^2.3.0"
