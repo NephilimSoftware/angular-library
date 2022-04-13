@@ -29,6 +29,7 @@ import {SelectSinglePage} from '@app/pages/examples/select/single/select-single.
 import {TextareaPage} from '@app/pages/examples/textarea/textarea.page';
 import {CheckPipe} from '@app/pipes/check.pipe';
 import {FormsModule} from '@nephilimsoftware/forms';
+
 import {AppRoutingModule} from './app-routing.module';
 
 const components: any[] = [

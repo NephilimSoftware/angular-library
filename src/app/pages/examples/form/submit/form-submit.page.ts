@@ -1,6 +1,6 @@
 import {Component, OnDestroy} from '@angular/core';
 import {allAreTrue, Form, FormArray, FormControl, IFormControlContainer, SubmittableForm, Validate} from '@nephilimsoftware/forms';
-import {combineLatest, BehaviorSubject, Observable, Subscription} from 'rxjs';
+import {BehaviorSubject, combineLatest, Observable, Subscription} from 'rxjs';
 import {delay, map} from 'rxjs/operators';
 
 interface AddressDto {
@@ -116,7 +116,7 @@ export class FormSubmitPage implements OnDestroy {
     this.form.destroy();
   }
 
-  private _saveUserDto = (data: UserDto): Observable<SubmitTaskResponseDto> => {
+  private readonly _saveUserDto = (data: UserDto): Observable<SubmitTaskResponseDto> => {
     return new BehaviorSubject<SubmitTaskResponseDto>({
       code: 'success',
       data,

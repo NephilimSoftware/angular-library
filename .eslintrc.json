@@ -1,0 +1,102 @@
+{
+  "root": true,
+  "ignorePatterns": ["projects/**/*"],
+  "overrides": [
+    {
+      "plugins": ["simple-import-sort", "unused-imports"],
+      "files": ["*.ts"],
+      "parserOptions": {
+        "project": ["tsconfig.json"],
+        "createDefaultProgram": true
+      },
+      "extends": ["plugin:@angular-eslint/recommended", "plugin:@angular-eslint/template/process-inline-templates"],
+      "rules": {
+        "@typescript-eslint/explicit-member-accessibility": [
+          "error",
+          {
+            "accessibility": "explicit",
+            "overrides": {
+              "accessors": "explicit",
+              "constructors": "explicit",
+              "methods": "explicit",
+              "properties": "explicit",
+              "parameterProperties": "explicit"
+            }
+          }
+        ],
+        "@typescript-eslint/no-explicit-any": ["error"],
+        "@typescript-eslint/explicit-function-return-type": [
+          "error",
+          {
+            "allowExpressions": true,
+            "allowTypedFunctionExpressions": true,
+            "allowHigherOrderFunctions": false,
+            "allowDirectConstAssertionInArrowFunctions": false,
+            "allowConciseArrowFunctionExpressionsStartingWithVoid": false
+          }
+        ],
+        "@typescript-eslint/member-ordering": [
+          "error",
+          {"default": ["signature", "static-field", "static-method", "field", "constructor", "method"]}
+        ],
+        "@typescript-eslint/no-non-null-assertion": "error",
+        "@typescript-eslint/prefer-readonly": ["error", {}],
+        "@typescript-eslint/promise-function-async": ["error", {}],
+        "@typescript-eslint/typedef": [
+          "error",
+          {
+            "arrayDestructuring": false,
+            "arrowParameter": false,
+            "memberVariableDeclaration": true,
+            "objectDestructuring": true,
+            "parameter": true,
+            "propertyDeclaration": true,
+            "variableDeclaration": true,
+            "variableDeclarationIgnoreFunction": true
+          }
+        ],
+        "unused-imports/no-unused-imports": ["error"],
+        "eqeqeq": ["error", "always"],
+        "no-duplicate-imports": "off",
+        "@typescript-eslint/no-duplicate-imports": ["error"],
+        "no-shadow": "off",
+        "sort-imports": "off",
+        "simple-import-sort/imports": "error",
+        "@typescript-eslint/no-shadow": ["error"],
+        "no-console": ["error", {"allow": ["warn", "error"]}],
+        "max-depth": [
+          "error",
+          {
+            "max": 3
+          }
+        ],
+        "@angular-eslint/directive-selector": [
+          "error",
+          {
+            "type": "attribute",
+            "style": "camelCase"
+          }
+        ],
+        "@angular-eslint/component-class-suffix": [
+          "error",
+          {
+            "suffixes": ["Component", "Container", "Page"]
+          }
+        ],
+        "@angular-eslint/component-selector": [
+          "error",
+          {
+            "type": "element",
+            "prefix": "app",
+            "style": "kebab-case"
+          }
+        ]
+      }
+    },
+    {
+      "files": ["*.html"],
+      "extends": ["plugin:@angular-eslint/template/recommended", "prettier"],
+      "rules": {}
+    }
+  ]
+}
