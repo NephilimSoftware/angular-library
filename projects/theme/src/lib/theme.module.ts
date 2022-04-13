@@ -17,7 +17,6 @@ import {LabelComponent} from './components/label/label.component';
 import {LayoutComponent} from './components/layout/layout.component';
 import {LayoutItemComponent} from './components/layout-item/layout-item.component';
 import {ParagraphComponent} from './components/paragraph/paragraph.component';
-import {ComboBoxSearchExampleDirective} from './directives/combo-box-search-example.directive';
 import {ComboBoxSearchDirective} from './directives/combo-box-search.directive';
 
 const imports: any[] = [
@@ -43,7 +42,7 @@ const components: Type<any>[] = [
 ];
 const pipes: Type<any>[] = [];
 const services: Type<any>[] = [];
-const directives: Type<any>[] = [ComboBoxSearchDirective, ComboBoxSearchExampleDirective];
+const directives: Type<any>[] = [ComboBoxSearchDirective];
 
 const providers: Provider[] = [
   {

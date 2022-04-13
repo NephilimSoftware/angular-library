@@ -17,7 +17,7 @@ import {ControlValueAccessor, FormControl, NgControl} from '@angular/forms';
 import {MatAutocompleteSelectedEvent, MatAutocompleteTrigger} from '@angular/material/autocomplete';
 import {MatOption} from '@angular/material/core';
 import {MatFormField, MatFormFieldControl} from '@angular/material/form-field';
-import {currentValue} from '@nephilimSoftwarePackages/reactive-forms';
+import {currentValue} from '@nephilimsoftware/reactive-forms';
 import {Observable, Subscription} from 'rxjs';
 import {map, shareReplay} from 'rxjs/operators';
 
