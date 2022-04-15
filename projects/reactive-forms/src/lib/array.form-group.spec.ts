@@ -1,6 +1,7 @@
 import {FormControl} from '@angular/forms';
+import {Observable} from 'rxjs';
 import {ArrayFormGroup} from './array.form-group';
-import {read} from '@nephilimSoftwarePackages/observables';
+import {read} from '@nephilimsoftware/observables';
 
 describe('ArrayFormGroup', () => {
   let arrayFormGroup: ArrayFormGroup<FormControl>;
@@ -50,4 +51,20 @@ describe('ArrayFormGroup', () => {
     arrayFormGroup.removeAllItems();
     expect((await read(arrayFormGroup.items)).length).toBe(0);
   });
+
+  // it('merges all events', async () => {
+  //   const controls: FormControl[] = [new FormControl('init-0'), new FormControl('init-1')];
+  //   arrayFormGroup.setItems(controls);
+  //   const merged: Observable<string> = arrayFormGroup.merge((item) => item.valueChanges);
+  // });
+  //
+  // it('combine all values', async () => {
+  //   const controls: FormControl[] = [new FormControl('init-0'), new FormControl('init-1')];
+  //   arrayFormGroup.setItems(controls);
+  //   const combine: Observable<string[]> = arrayFormGroup.combine((item) => item.value);
+  // });
+  //
+  // it('fetches data synchronously', async () => {
+  //   arrayFormGroup.push(new FormControl('init'));
+  // });
 });

@@ -1,5 +1,5 @@
 import {AbstractControl} from '@angular/forms';
-import {warmUp} from '@nephilimSoftwarePackages/observables';
+import {warmUp} from '@nephilimsoftware/observables';
 import {Observable} from 'rxjs';
 import {distinctUntilChanged, shareReplay, startWith} from 'rxjs/operators';
 

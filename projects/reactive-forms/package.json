@@ -9,7 +9,8 @@
   "scripts": {
     "build": "ng build reactive-forms --prod",
     "start": "ng build reactive-forms --watch",
-    "test": "ng test reactive-forms"
+    "test": "ng test reactive-forms",
+    "test:ci": "ng test reactive-forms --watch=false --source-map=false --progress=false"
   },
   "dependencies": {
     "tslib": "^2.3.0"
