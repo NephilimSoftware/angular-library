@@ -13,15 +13,6 @@
   --line-height--m: 17px;
   --line-height--xs: 9px;
 
-  --form-field_height: var(--size--xl);
-  --form-field_radius: var(--size--xxs);
-  --form-field--disabled_background: #fafafa;
-  --form-field--disabled_color: var(--color--ui-05);
-
-  --button_height: var(--form-field_height);
-  --button_radius: var(--form-field_radius);
-  --button--neutral_background: var(--color--ui-02);
-
   --font-family--paragraph: Comfortaa, sans-serif;
   --font-weight--normal: 400;
   --font-weight--bold: 700;
@@ -69,15 +60,19 @@
 
   --caption_font-size: var(--font-size--xs);
   --caption_line-height: var(--line-height--xs);
+  --caption_color: var(--color--ui-08);
 
   --paragraph_font-size: var(--font-size--m);
   --paragraph_line-height: var(--line-height--m);
+  --paragraph_color: var(--color--ui-08);
 
   --label_font-size: var(--font-size--l);
   --label_line-height: var(--line-height--l);
+  --label_color: var(--color--ui-08);
 
   --heading_font-size: var(--font-size--xl);
   --heading_line-height: var(--line-height--xl);
+  --heading_color: var(--color--ui-08);
 
   // Because of material design those value must have those weird values
   --layer--blocker: 800;

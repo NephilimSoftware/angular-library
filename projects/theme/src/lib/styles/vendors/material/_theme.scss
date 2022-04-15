@@ -1,12 +1,12 @@
 @use '@angular/material' as mat;
 
-$clearsound-typography: mat.define-typography-config(
+$custom-typography: mat.define-typography-config(
   $font-family: var(--font-family--paragraph),
   $button: mat.define-typography-level(var(--font-size--m), 1em),
   $input: mat.define-typography-level(var(--font-size--m), 1em),
 );
 
-$clearsound-palette: (
+$custom-palette: (
   100: var(--color--brand-02),
   500: var(--color--brand-01),
   700: var(--color--brand-03),
@@ -29,37 +29,37 @@ $clearsound-palette: (
   ),
 );
 
-@include mat.core($clearsound-typography);
+@include mat.core($custom-typography);
 
-$clearsound-primary: mat.define-palette($clearsound-palette, 500, 100, 700);
-$clearsound-accent: mat.define-palette($clearsound-palette, A500, A100, A700);
-$clearsound-warn: mat.define-palette($clearsound-palette, W500, W100, W700);
+$custom-primary: mat.define-palette($custom-palette, 500, 100, 700);
+$custom-accent: mat.define-palette($custom-palette, A500, A100, A700);
+$custom-warn: mat.define-palette($custom-palette, W500, W100, W700);
 
-$clearsound-theme: mat.define-light-theme(
+$custom-theme: mat.define-light-theme(
   (
     color: (
-      primary: $clearsound-primary,
-      accent: $clearsound-accent,
-      warn: $clearsound-warn,
+      primary: $custom-primary,
+      accent: $custom-accent,
+      warn: $custom-warn,
     ),
   )
 );
 
-@include mat.autocomplete-theme($clearsound-theme);
-@include mat.button-theme($clearsound-theme);
-@include mat.button-toggle-theme($clearsound-theme);
-@include mat.checkbox-theme($clearsound-theme);
-@include mat.core-theme($clearsound-theme);
-@include mat.datepicker-theme($clearsound-theme);
-@include mat.form-field-theme($clearsound-theme);
-@include mat.menu-theme($clearsound-theme);
-@include mat.paginator-theme($clearsound-theme);
-@include mat.progress-bar-theme($clearsound-theme);
-@include mat.progress-spinner-theme($clearsound-theme);
-@include mat.radio-theme($clearsound-theme);
-@include mat.select-theme($clearsound-theme);
-@include mat.slide-toggle-theme($clearsound-theme);
-@include mat.slider-theme($clearsound-theme);
-@include mat.snack-bar-theme($clearsound-theme);
-@include mat.table-theme($clearsound-theme);
-@include mat.tooltip-theme($clearsound-theme);
+@include mat.autocomplete-theme($custom-theme);
+@include mat.button-theme($custom-theme);
+@include mat.button-toggle-theme($custom-theme);
+@include mat.checkbox-theme($custom-theme);
+@include mat.core-theme($custom-theme);
+@include mat.datepicker-theme($custom-theme);
+@include mat.form-field-theme($custom-theme);
+@include mat.menu-theme($custom-theme);
+@include mat.paginator-theme($custom-theme);
+@include mat.progress-bar-theme($custom-theme);
+@include mat.progress-spinner-theme($custom-theme);
+@include mat.radio-theme($custom-theme);
+@include mat.select-theme($custom-theme);
+@include mat.slide-toggle-theme($custom-theme);
+@include mat.slider-theme($custom-theme);
+@include mat.snack-bar-theme($custom-theme);
+@include mat.table-theme($custom-theme);
+@include mat.tooltip-theme($custom-theme);

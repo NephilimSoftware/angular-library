@@ -11,13 +11,12 @@ import {MAT_PROGRESS_SPINNER_DEFAULT_OPTIONS, MatProgressSpinnerModule} from '@a
 import {MatSelectModule} from '@angular/material/select';
 import {MAT_TOOLTIP_DEFAULT_OPTIONS, MatTooltipModule} from '@angular/material/tooltip';
 import {CaptionComponent} from './components/caption/caption.component';
-import {ComboBoxComponent} from './components/combo-box/combo-box.component';
 import {HeadingComponent} from './components/heading/heading.component';
 import {LabelComponent} from './components/label/label.component';
 import {LayoutComponent} from './components/layout/layout.component';
 import {LayoutItemComponent} from './components/layout-item/layout-item.component';
 import {ParagraphComponent} from './components/paragraph/paragraph.component';
-import {ComboBoxSearchDirective} from './directives/combo-box-search.directive';
+import {ColumnDirective} from './directives/column.directive';
 
 const imports: any[] = [
   CommonModule,
@@ -33,7 +32,6 @@ const imports: any[] = [
 ];
 const components: Type<any>[] = [
   CaptionComponent,
-  ComboBoxComponent,
   HeadingComponent,
   LabelComponent,
   LayoutComponent,
@@ -42,7 +40,7 @@ const components: Type<any>[] = [
 ];
 const pipes: Type<any>[] = [];
 const services: Type<any>[] = [];
-const directives: Type<any>[] = [ComboBoxSearchDirective];
+const directives: Type<any>[] = [ColumnDirective];
 
 const providers: Provider[] = [
   {
