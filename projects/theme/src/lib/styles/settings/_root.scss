@@ -74,6 +74,14 @@
   --heading_line-height: var(--line-height--xl);
   --heading_color: var(--color--ui-08);
 
+  --popup_background-color: rgba(0, 0, 0, 0.1);
+  --popup__content_background-color: var(--color--ui-01);
+  --popup__content_padding: var(--size--m) var(--size--s);
+  --popup__content--s_width: 15rem;
+  --popup__content--m_width: 25rem;
+  --popup__content--l_width: 50rem;
+  --popup__content--xl_width: 75rem;
+
   // Because of material design those value must have those weird values
   --layer--blocker: 800;
   --layer--notification: 700;

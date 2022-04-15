@@ -16,6 +16,7 @@ import {LabelComponent} from './components/label/label.component';
 import {LayoutComponent} from './components/layout/layout.component';
 import {LayoutItemComponent} from './components/layout-item/layout-item.component';
 import {ParagraphComponent} from './components/paragraph/paragraph.component';
+import {PopupComponent} from './components/popup/popup.component';
 import {ColumnDirective} from './directives/column.directive';
 
 const imports: any[] = [
@@ -37,6 +38,7 @@ const components: Type<any>[] = [
   LayoutComponent,
   LayoutItemComponent,
   ParagraphComponent,
+  PopupComponent,
 ];
 const pipes: Type<any>[] = [];
 const services: Type<any>[] = [];

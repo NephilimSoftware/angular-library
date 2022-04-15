@@ -3,9 +3,15 @@
 <app-paragraph>This is paragraph</app-paragraph>
 <app-caption class="u-margin-bottom--l">This is caption</app-caption>
 
-<app-layout [isSpaced]="true">
-  <app-layout-item [col]="2"><app-box [color]="'red'"></app-box></app-layout-item>
-  <app-layout-item [col]="4"><app-box [color]="'green'"></app-box></app-layout-item>
-  <app-layout-item [col]="6"><app-box [color]="'blue'"></app-box></app-layout-item>
-  <app-layout-item [col]="12"><app-box [color]="'yellow'"></app-box></app-layout-item>
-</app-layout>
+<div class="u-margin-bottom--l">
+  <app-layout [isSpaced]="true">
+    <app-layout-item [col]="2"><app-box [color]="'red'"></app-box></app-layout-item>
+    <app-layout-item [col]="4"><app-box [color]="'green'"></app-box></app-layout-item>
+    <app-layout-item [col]="6"><app-box [color]="'blue'"></app-box></app-layout-item>
+    <app-layout-item [col]="12"><app-box [color]="'yellow'"></app-box></app-layout-item>
+  </app-layout>
+</div>
+
+<button mat-raised-button (click)="onOpenPopupRequested()">Open Popup</button>
+
+<app-popup (closeRequested)="onClosePopupRequested()" *ngIf="isPopupVisible | async">This is popup</app-popup>

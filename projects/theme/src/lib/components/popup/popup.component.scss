@@ -1,0 +1,49 @@
+:host {
+  display: flex;
+  position: fixed;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  background-color: var(--popup_background-color);
+  padding: var(--size--m) var(--size--xl);
+  align-items: center;
+  justify-content: center;
+  overflow: auto;
+  z-index: var(--layer--screen-attached);
+
+  .app-popup__content {
+    position: relative;
+    background-color: var(--popup__content_background-color);
+    padding: var(--popup__content_padding);
+    box-shadow: var(--elevation--01);
+    width: var(--popup__content--m_width);
+    max-height: 100%;
+    overflow-y: scroll;
+    box-sizing: border-box;
+  }
+
+  .app-popup__close-button {
+    position: absolute;
+    top: var(--size--xs);
+    right: var(--size--xs);
+  }
+
+  &.app-popup--s {
+    .app-popup__content {
+      width: var(--popup__content--s_width);
+    }
+  }
+
+  &.app-popup--l {
+    .app-popup__content {
+      width: var(--popup__content--l_width);
+    }
+  }
+
+  &.app-popup--xl {
+    .app-popup__content {
+      width: var(--popup__content--xl_width);
+    }
+  }
+}

@@ -10,5 +10,6 @@ export * from './lib/components/label/label.component';
 export * from './lib/components/layout/layout.component';
 export * from './lib/components/layout-item/layout-item.component';
 export * from './lib/components/paragraph/paragraph.component';
+export * from './lib/components/popup/popup.component';
 
 export * from './lib/directives/column.directive';
