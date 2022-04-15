@@ -31,6 +31,7 @@ import {CheckPipe} from '@app/pipes/check.pipe';
 import {FormsModule} from '@nephilimsoftware/forms';
 
 import {AppRoutingModule} from './app-routing.module';
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 
 const components: any[] = [
   ControlDebugComponent,
@@ -66,7 +67,7 @@ const pipes: any[] = [CheckPipe];
 
 @NgModule({
   declarations: [RootComponent, ...components, ...pages, ...pipes],
-  imports: [BrowserModule, AppRoutingModule, FormsModule],
+  imports: [BrowserModule, AppRoutingModule, FormsModule, BrowserAnimationsModule],
   providers: [],
   bootstrap: [RootComponent],
 })

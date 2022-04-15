@@ -146,6 +146,37 @@
           }
         }
       }
+    },
+    "combobox": {
+      "projectType": "library",
+      "root": "projects/combobox",
+      "sourceRoot": "projects/combobox/src",
+      "prefix": "lib",
+      "architect": {
+        "build": {
+          "builder": "@angular-devkit/build-angular:ng-packagr",
+          "options": {
+            "project": "projects/combobox/ng-package.json"
+          },
+          "configurations": {
+            "production": {
+              "tsConfig": "projects/combobox/tsconfig.lib.prod.json"
+            },
+            "development": {
+              "tsConfig": "projects/combobox/tsconfig.lib.json"
+            }
+          },
+          "defaultConfiguration": "production"
+        },
+        "test": {
+          "builder": "@angular-devkit/build-angular:karma",
+          "options": {
+            "main": "projects/combobox/src/test.ts",
+            "tsConfig": "projects/combobox/tsconfig.spec.json",
+            "karmaConfig": "projects/combobox/karma.conf.js"
+          }
+        }
+      }
     }
   },
   "defaultProject": "angular-library"
