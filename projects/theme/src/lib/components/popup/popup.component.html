@@ -1,0 +1,8 @@
+<div class="app-popup__content">
+  <div *ngIf="closeRequested.observers.length > 0" class="app-popup__close-button">
+    <button mat-icon-button (click)="onCloseClicked()">
+      <mat-icon>close</mat-icon>
+    </button>
+  </div>
+  <ng-content></ng-content>
+</div>

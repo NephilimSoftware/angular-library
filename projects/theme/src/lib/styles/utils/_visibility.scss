@@ -1,0 +1,57 @@
+@import '../settings/variables';
+
+.u-visibility {
+  &--hidden {
+    display: none;
+
+    &---s {
+      @media all and (min-width: $screen--s) {
+        display: none;
+      }
+    }
+
+    &---m {
+      @media all and (min-width: $screen--m) {
+        display: none;
+      }
+    }
+
+    &---l {
+      @media all and (min-width: $screen--l) {
+        display: none;
+      }
+    }
+
+    &---xl {
+      @media all and (min-width: $screen--xl) {
+        display: none;
+      }
+    }
+  }
+
+  &--visible {
+    &---s {
+      @media all and (max-width: $screen--s - 1px) {
+        display: none;
+      }
+    }
+
+    &---m {
+      @media all and (max-width: $screen--m - 1px) {
+        display: none;
+      }
+    }
+
+    &---l {
+      @media all and (max-width: $screen--l - 1px) {
+        display: none;
+      }
+    }
+
+    &---xl {
+      @media all and (max-width: $screen--xl - 1px) {
+        display: none;
+      }
+    }
+  }
+}

@@ -1,0 +1,12 @@
+@import '../settings/variables';
+
+@mixin transition($properties) {
+  $transition-value: '';
+  @each $property in $properties {
+    $transition-value: unquote($transition-value + ' ' + $property + ' var(--transition_time) var(--transition_ease)');
+    @if $property != nth($properties, length($properties)) {
+      $transition-value: $transition-value + ', ';
+    }
+  }
+  transition: $transition-value;
+}

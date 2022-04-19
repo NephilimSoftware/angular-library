@@ -1,0 +1,47 @@
+<section class="o-layout">
+  <aside>
+    <nav>
+      <ul>
+        <li>
+          <p>input</p>
+          <ul>
+            <li><a [routerLink]="['/', 'forms', 'examples', 'input', 'checkbox']">checkbox</a></li>
+            <li><a [routerLink]="['/', 'forms', 'examples', 'input', 'date']">date</a></li>
+            <li><a [routerLink]="['/', 'forms', 'examples', 'input', 'datetime-local']">datetime-local</a></li>
+            <li><a [routerLink]="['/', 'forms', 'examples', 'input', 'email']">email</a></li>
+            <li><a [routerLink]="['/', 'forms', 'examples', 'input', 'file']">file</a></li>
+            <li><a [routerLink]="['/', 'forms', 'examples', 'input', 'month']">month</a></li>
+            <li><a [routerLink]="['/', 'forms', 'examples', 'input', 'number']">number</a></li>
+            <li><a [routerLink]="['/', 'forms', 'examples', 'input', 'password']">password</a></li>
+            <li><a [routerLink]="['/', 'forms', 'examples', 'input', 'radio']">radio</a></li>
+            <li><a [routerLink]="['/', 'forms', 'examples', 'input', 'range']">range</a></li>
+            <li><a [routerLink]="['/', 'forms', 'examples', 'input', 'search']">search</a></li>
+            <li><a [routerLink]="['/', 'forms', 'examples', 'input', 'text']">text</a></li>
+            <li><a [routerLink]="['/', 'forms', 'examples', 'input', 'time']">time</a></li>
+            <li><a [routerLink]="['/', 'forms', 'examples', 'input', 'week']">week</a></li>
+          </ul>
+        </li>
+        <li>
+          <p>select</p>
+          <ul>
+            <li><a [routerLink]="['/', 'forms', 'examples', 'select', 'single']">single</a></li>
+            <li><a [routerLink]="['/', 'forms', 'examples', 'select', 'multiple']">multiple</a></li>
+          </ul>
+        </li>
+        <li>
+          <a [routerLink]="['/', 'forms', 'examples', 'textarea']">textarea</a>
+        </li>
+        <li>
+          <p>form</p>
+          <ul>
+            <li><a [routerLink]="['/', 'forms', 'examples', 'form', 'submit']">submit</a></li>
+            <li><a [routerLink]="['/', 'forms', 'examples', 'form', 'async-validators']">asynchronous validators</a></li>
+          </ul>
+        </li>
+      </ul>
+    </nav>
+  </aside>
+  <main>
+    <router-outlet></router-outlet>
+  </main>
+</section>

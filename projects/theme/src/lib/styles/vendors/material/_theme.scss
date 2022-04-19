@@ -1,0 +1,65 @@
+@use '@angular/material' as mat;
+
+$custom-typography: mat.define-typography-config(
+  $font-family: var(--font-family--paragraph),
+  $button: mat.define-typography-level(var(--font-size--m), 1em),
+  $input: mat.define-typography-level(var(--font-size--m), 1em),
+);
+
+$custom-palette: (
+  100: var(--color--brand-02),
+  500: var(--color--brand-01),
+  700: var(--color--brand-03),
+  A100: var(--color--brand-05),
+  A500: var(--color--brand-04),
+  A700: var(--color--brand-06),
+  W100: var(--color--brand-08),
+  W500: var(--color--brand-07),
+  W700: var(--color--brand-09),
+  contrast: (
+    100: var(--color--ui-01),
+    500: var(--color--ui-01),
+    700: var(--color--ui-01),
+    A100: var(--color--ui-01),
+    A500: var(--color--ui-01),
+    A700: var(--color--ui-01),
+    W100: var(--color--ui-01),
+    W500: var(--color--ui-01),
+    W700: var(--color--ui-01),
+  ),
+);
+
+@include mat.core($custom-typography);
+
+$custom-primary: mat.define-palette($custom-palette, 500, 100, 700);
+$custom-accent: mat.define-palette($custom-palette, A500, A100, A700);
+$custom-warn: mat.define-palette($custom-palette, W500, W100, W700);
+
+$custom-theme: mat.define-light-theme(
+  (
+    color: (
+      primary: $custom-primary,
+      accent: $custom-accent,
+      warn: $custom-warn,
+    ),
+  )
+);
+
+@include mat.autocomplete-theme($custom-theme);
+@include mat.button-theme($custom-theme);
+@include mat.button-toggle-theme($custom-theme);
+@include mat.checkbox-theme($custom-theme);
+@include mat.core-theme($custom-theme);
+@include mat.datepicker-theme($custom-theme);
+@include mat.form-field-theme($custom-theme);
+@include mat.menu-theme($custom-theme);
+@include mat.paginator-theme($custom-theme);
+@include mat.progress-bar-theme($custom-theme);
+@include mat.progress-spinner-theme($custom-theme);
+@include mat.radio-theme($custom-theme);
+@include mat.select-theme($custom-theme);
+@include mat.slide-toggle-theme($custom-theme);
+@include mat.slider-theme($custom-theme);
+@include mat.snack-bar-theme($custom-theme);
+@include mat.table-theme($custom-theme);
+@include mat.tooltip-theme($custom-theme);

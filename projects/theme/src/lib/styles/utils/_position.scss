@@ -1,0 +1,6 @@
+.u-position {
+  &--absolute {
+    position: absolute;
+    z-index: var(--layer--screen-attached);
+  }
+}

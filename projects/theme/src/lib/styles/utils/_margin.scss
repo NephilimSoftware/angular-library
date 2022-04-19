@@ -1,0 +1,15 @@
+@import '../tools/sizing';
+
+@mixin margin($suffix: '') {
+  @include sizing((margin), '', $suffix);
+  @include sizing((margin-top, margin-bottom), '-vertical', $suffix);
+  @include sizing((margin-left, margin-right), '-horizontal', $suffix);
+  @include sizing((margin-top), '-top', $suffix);
+  @include sizing((margin-right), '-right', $suffix);
+  @include sizing((margin-bottom), '-bottom', $suffix);
+  @include sizing((margin-left), '-left', $suffix);
+}
+
+html body .u-margin {
+  @include margin();
+}
