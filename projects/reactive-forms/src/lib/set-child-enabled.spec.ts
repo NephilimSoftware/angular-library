@@ -9,20 +9,23 @@ describe('setChildEnabled', () => {
   beforeEach(() => {
     formGroup = new FormGroup({});
     control = new FormControl();
-    setControlEnabled = setChildEnabled(formGroup, 'control', control);
+    setControlEnabled = setChildEnabled(formGroup, 'testField', control);
+    formGroup.addControl('testField', control);
   });
 
   it('sets child as disabled', () => {
-    formGroup.addControl('control', control);
-
+    control.enable();
     setControlEnabled(false);
-    expect(formGroup.get('control')).toBe(null);
+
+    expect(formGroup.get('testField')).toBe(null);
     expect(control.disabled).toBe(true);
   });
 
   it('sets child as enabled', () => {
+    control.disable();
     setControlEnabled(true);
-    expect(formGroup.get('control')).toEqual(control);
+
+    expect(formGroup.get('testField')).toEqual(control);
     expect(control.enabled).toBe(true);
   });
 });

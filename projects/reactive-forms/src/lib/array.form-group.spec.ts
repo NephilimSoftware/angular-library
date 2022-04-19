@@ -1,4 +1,5 @@
 import {FormControl} from '@angular/forms';
+import {currentValue} from './abstract-control';
 import {Observable, Subject} from 'rxjs';
 import {ArrayFormGroup} from './array.form-group';
 import {read} from '@nephilimsoftware/observables';
@@ -88,24 +89,20 @@ describe('ArrayFormGroup', () => {
     expect(callback).toHaveBeenCalledWith('second');
   });
 
-  it('combine all values', () => {
+  it('combines all values', () => {
     const controls: MockFormControl[] = [new MockFormControl(), new MockFormControl()];
     const callback: Spy = createCallbackSpy();
     arrayFormGroup.setItems(controls);
-    const combine: Observable<string[]> = arrayFormGroup.combine((item) => item.requested);
+    const combine: Observable<string[]> = arrayFormGroup.combine((item) => currentValue(item));
     combine.subscribe(callback);
 
-    expect(callback).not.toHaveBeenCalled();
+    controls[0].setValue('first');
+    controls[1].setValue('second');
 
-    controls[0].requested.next('first');
-    controls[1].requested.next('second');
-
-    expect(callback).toHaveBeenCalledTimes(1);
     expect(callback).toHaveBeenCalledWith(['first', 'second']);
 
-    controls[1].requested.next('third');
+    controls[1].setValue('third');
 
-    expect(callback).toHaveBeenCalledTimes(2);
     expect(callback).toHaveBeenCalledWith(['first', 'third']);
   });
 });
