@@ -57,18 +57,6 @@ export class ArrayFormGroup<TItemFormGroup extends AbstractControl> extends Form
     return this.items.pipe(switchMap((item) => combineLatestIncludingEmpty(item.map(project))));
   }
 
-  public async fetch<TResult>(
-    getResult: (item: TItemFormGroup) => Promise<TResult | undefined>
-  ): Promise<TResult | undefined> {
-    for (const item of await read(this.items)) {
-      const result: TResult | undefined = await getResult(item);
-      if (result !== undefined) {
-        return result;
-      }
-    }
-    return undefined;
-  }
-
   private _removeAllItems(): void {
     const length: number = this.controls.length;
     for (let i: number = 0; i < length; i++) {
