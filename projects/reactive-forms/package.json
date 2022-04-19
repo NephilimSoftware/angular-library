@@ -1,0 +1,18 @@
+{
+  "name": "@nephilimsoftware/reactive-forms",
+  "version": "0.0.1",
+  "peerDependencies": {
+    "@angular/common": "^13.3.0",
+    "@angular/core": "^13.3.0",
+    "@nephilimsoftware/observables": "0.0.1"
+  },
+  "scripts": {
+    "build": "ng build reactive-forms --prod",
+    "start": "ng build reactive-forms --watch",
+    "test": "ng test reactive-forms",
+    "test:ci": "ng test reactive-forms --watch=false --source-map=false --progress=false"
+  },
+  "dependencies": {
+    "tslib": "^2.3.0"
+  }
+}
