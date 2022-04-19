@@ -57,8 +57,8 @@ export class FormAsynchronousValidatorsPage implements OnDestroy {
     event.preventDefault();
     //
     // try {
-    //   await read(this.forms.submit(() => new BehaviorSubject(null).pipe(delay(1000))));
-    //   this.result.next(this.forms.value.get());
+    //   await read(this.form.submit(() => new BehaviorSubject(null).pipe(delay(1000))));
+    //   this.result.next(this.form.value.get());
     // } catch (errors) {
     //   console.log(errors);
     // }

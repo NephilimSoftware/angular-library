@@ -7,7 +7,7 @@ import {Component, HostBinding, Input} from '@angular/core';
 })
 export class LayoutComponent {
   @HostBinding('class.o-layout')
-  public cssClass: boolean = true;
+  public readonly cssClass: boolean = true;
 
   @HostBinding('class.o-layout--spaced')
   @Input()

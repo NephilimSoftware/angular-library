@@ -7,5 +7,5 @@ import {Component, HostBinding} from '@angular/core';
 })
 export class LayoutItemComponent {
   @HostBinding('class.o-layout__item')
-  public cssClass: boolean = true;
+  public readonly cssClass: boolean = true;
 }
